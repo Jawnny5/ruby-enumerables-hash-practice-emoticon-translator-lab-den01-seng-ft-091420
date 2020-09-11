@@ -20,8 +20,12 @@ end
 def get_japanese_emoticon(path, emoticon)
   helper = load_library(path)
   translated = ""
+  apology = "Sorry, that emoji was not found"
   helper.each do |eng, hash|
     hash.each do |k, v|
+      if hash[:english] == emoticon
+        emoticon = hash[:japanese]
+        
       # binding.pry
     end
     binding.pry
