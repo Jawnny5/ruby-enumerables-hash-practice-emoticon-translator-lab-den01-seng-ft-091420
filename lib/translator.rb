@@ -25,7 +25,8 @@ def get_japanese_emoticon(path, emoticon)
     hash.each do |k, v|
       if hash[:english] == emoticon
         emoticon = hash[:japanese]
-
+      end
+      translated << emoticon
       # binding.pry
     end
     binding.pry
